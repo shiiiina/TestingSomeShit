@@ -1,0 +1,101 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://wikiki.github.io/css/documentation.css?v=201911011043">
+
+    <style>
+        #myBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 20px;
+            border: none;
+            outline: none;
+            background-color: rgba(80, 79, 98, 0.755);
+            color: white;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .mode-label {
+            color: rgb(220, 220, 220);
+        }
+
+        .n1 {
+            color: #e67458;
+        }
+
+        .nav-item-text-selected {
+            color: #d34e2c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Toggle -->
+    <div class="field" id="myBtn">
+        <input onclick="toggleDark()" id="switchColorWarning" type="checkbox" name="switchColorWarning"
+            class="switch is-warning" checked="checked">
+        <label for="switchColorWarning" class="mode-label">Dark Mode</label>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar is-dark" style="background-color: #393939;">
+        <div class="container is-max-widescreen">
+            <div class="navbar-brand" style="background-color: #393939;">
+                <a href="#" class="navbar-item"
+                    style="font-weight: bold; color: #d34e2c;">Website</a>
+                <span class="navbar-burger burger" data-target="navMenu">
+                    <span style="color: white;"></span>
+                    <span style="color: white;"></span>
+                    <span style="color: white;"></span>
+
+                </span>
+            </div>
+            <div id="navMenu" class="navbar-menu n1" style="background-color: #393939;">
+                <div class="navbar-end">
+                    <a href="#" class="n1 navbar-item"><span class="n1">Home</span></a>
+                    <a href="#" class="n1 navbar-item"><span class="n1">One</span></a>
+                    <a href="#" class="n1 navbar-item"><span class="n1">Two</span></a>
+                    <a href="#" class="n1 navbar-item"><span class="n1">Three</span></a>
+                    <a href="#" class="n1 navbar-item"><span class="n1">Four</span></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar Burger -->
+    <script type="text/javascript">
+        (function () {
+            var burger = document.querySelector('.burger');
+            var nav = document.querySelector('#' + burger.dataset.target);
+
+            burger.addEventListener('click', function () {
+                burger.classList.toggle('is-active');
+                nav.classList.toggle('is-active');
+            })
+        })();
+    </script>
+
+    <!-- Content -->
+    <p>
+        
+    </p>
+
+    <script>
+        var toggleDarks = document.getElementById("switchColorWarning");
+
+        function toggleDark() {
+            console.log('test')
+        }
+    </script>
+
+</body>
